@@ -3,7 +3,10 @@ let taskList = document.getElementById("tasks__list")
 let addingButton = document.getElementById("tasks__add")
 
 function submitTask() {
-    if(taskInput.value.length > 0){
+    let currentInput = taskInput.value
+    let inputNoSpaces = currentInput.trim()
+
+    if(inputNoSpaces.length > 0 && /[a-zA-Zа-яА-Я]/.test(inputNoSpaces)){
         taskList.innerHTML += `
         <div class="task">
           <div class="task__title">
@@ -20,13 +23,6 @@ addingButton.addEventListener("click", (e) => {
     submitTask()
     e.preventDefault()
 })
-
-taskInput.addEventListener("keydown", (e) => {
-    if(e.key === "Enter"){
-        submitTask()
-    } 
-})
-
 
 taskList.addEventListener("click", (e) => {
     if (e.target.classList.contains("task__remove")) {
