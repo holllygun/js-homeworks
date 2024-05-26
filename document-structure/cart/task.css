@@ -82,10 +82,47 @@ body {
   cursor: pointer;
 }
 
+.product__remove:hover {
+  opacity: 0.8;
+}
+
+.product__remove {
+  background: red;
+  padding: 10px 20px;
+  margin-top: 10px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .product__add:hover {
   opacity: 0.8;
 }
 
+
 .product-shadow {
   position: absolute;
+}
+
+.non-cart {
+  display: none
+}
+
+.clear__position {
+  display: flex;
+}
+
+.clear__cart {
+  position: center;
+  background: rgb(255, 183, 0);
+  padding: 10px 20px;
+  margin: 0 auto;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.clear__cart:hover {
+  opacity: 0.8;
 }
